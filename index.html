@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head lang="ja">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'mpv3yug',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <link rel=stylesheet href="css/stylesheet.css">
+  <title>Kumano Ryosai 2024</title>
+</head>
+
+<body>
+
+<header>
+  <h1>Kumano Ryosai<br>2024</h1>
+</header>
+
+<main>
+  <div class="island">
+    <h1 class="font-en">Form</h1>
+    <input id="timeGetter" placeholder="11:00~" type="text">
+    <input id="placeGetter" placeholder="@食堂" type="text">
+    <textarea id="textGetter" placeholder="楽しいよ！　みんな来てね！"></textarea>
+    <button>generate</button>
+    <button id="output">output image</button>
+    <p></p>
+  </div>
+  <div class="island" id="result">
+    <div class="head_left"><h1 id="timePutter"></h1></div><div class="head_right"><h1 id="placePutter" class="font-en"></h1></div>
+    <img src="img/test.jpg">
+    <p id="textPutter"></p>
+  </div>
+  </div>
+</main>
+
+<!-- <footer>
+  <p>©2024 熊野寮祭実行委員会</p>
+</footer> -->
+
+</body>
+<script src="js/main.js"></script>
+</html>
