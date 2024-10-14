@@ -38,7 +38,7 @@ async function start() {
 
   const svgBase64 =
     "data:image/svg+xml;base64,"
-    + btoa(decodeURI(encodeURIComponent(svgText)));
+    + btoa(unescape(encodeURIComponent(svgText)));
   
   // 2倍のサイズでcanvasに描画する
   // svgなので描画サイズは自由に変えられる
