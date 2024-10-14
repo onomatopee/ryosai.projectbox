@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <head lang="ja">
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'mpv3yug',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+  <style id="css">
+    .res {
+  width: 400px;
+  height: 720px;
+  background-color: white;
+}
+@font-face {
+  font-family: noto-bold;
+  src: url("https://fonts.gstatic.com/s/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.ttf") format("truetype");
+}
+.res img {
+  width: 300px;
+  height: 300px;
+}
+  </style>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <link rel=stylesheet href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
   <title>Kumano Ryosai 2024</title>
 </head>
 
@@ -30,21 +38,23 @@
     <input id="timeGetter" placeholder="11:00~" type="text">
     <input id="placeGetter" placeholder="@食堂" type="text">
     <textarea id="textGetter" placeholder="楽しいよ！　みんな来てね！"></textarea>
-    <button>generate</button>
-    <button id="output">output image</button>
+    <button onclick="update()">update</button>
+    <button id="output" onclick="start()">generate canvas</button>
+    <button id="output" onclick="saveCanvas()">output image</button>
     <p></p>
   </div>
-  <div class="island" id="result">
+
+  <div class="res" id="result">
     <div class="head_left">
-      <h1 id="timePutter"  class="font-en"></h1>
+      <h1 id="timePutter" class="font-sans">23:00~</h1>
     </div>
     <div class="head_right">
-      <h1 id="placePutter" class="font-en"></h1>
+      <h1 id="placePutter" class="font-sans">@雪国</h1>
     </div>
     <img src="img/test.jpg">
-    <p id="textPutter"></p>
+    <p id="textPutter">国境の長いトンネルを抜けると雪国であった。夜の底が白くなった。信号所に汽車が止まった。向側の座席から娘が立って来て、島村の前のガラス窓を落した。雪の冷気が流れこんだ。</p>
   </div>
-  </div>
+  <canvas id="canvas" width="1000px" height="1800px"></canvas>
 </main>
 
 <!-- <footer>
