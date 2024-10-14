@@ -59,24 +59,6 @@ main img {
   height: 100%;
 }
 
-.head_left {
-  display: inline-block;
-  width: 45%;
-}
-
-.head_right {
-  display: inline-block;
-  width: 45%;
-}
-
-#timePutter {
-  left: 5%;
-}
-
-#placePutter {
-  right: 5%;
-}
-
 .island {
   width: 60%;
   padding: 7%;
@@ -89,20 +71,6 @@ main img {
 }
 .island p {
   font-size: 15px;
-}
-
-.res {
-  width: 2000px;
-  height: 3600px;
-  background-color: white;
-}
-@font-face {
-  font-family: noto-bold;
-  src: url("https://fonts.gstatic.com/s/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.ttf") format("truetype");
-}
-.res img {
-  width: 1600px;
-  height: 1600px;
 }
 
 footer {
@@ -123,4 +91,36 @@ footer a {
 }
 footer p {
   font-size: 7px;
+}
+
+.res {
+  padding: 50px;
+  font-family: "noto-bold", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: noto-bold;
+  src: url("https://fonts.gstatic.com/s/notosansjp/v53/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.ttf") format("truetype");
+  width: 450px;
+  height: 700px;
+  background-color: white;
+}
+.res img {
+  width: 350px;
+  height: 350px;
+}
+.res .head_left {
+  display: inline-block;
+  width: 45%;
+}
+.res .head_right {
+  display: inline-block;
+  width: 45%;
+}
+.res #timePutter {
+  left: 5%;
+}
+.res #placePutter {
+  right: 5%;
 }/*# sourceMappingURL=stylesheet.css.map */
