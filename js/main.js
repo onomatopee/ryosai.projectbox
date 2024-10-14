@@ -1,3 +1,15 @@
+// codes copied and pasted from https://blog.totoraj.net/sample/html-to-canvas/sample.html and https://blog.totoraj.net/2022-01-07-html-to-canvas/
+
+function routine() {
+  //load csv
+  //input nm time place text
+  document.getElementById('timePutter').textContent = time;
+  document.getElementById('placePutter').textContent = place;
+  document.getElementById('textPutter').textContent = text;
+  start();
+  saveCanvasStr(nm);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const $preview = document.querySelector("#result");
   $preview.addEventListener("input", () => {
@@ -8,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, false);
 });
-
 
 function update() {
   document.getElementById('timePutter').textContent = document.getElementById('timeGetter').value;
@@ -52,9 +63,13 @@ async function start() {
 }
 
 function saveCanvas() {
+  saveCanvasStr("canvasTest.png");
+}
+
+function saveCanvasStr(str) {
   const $canvas = document.querySelector("#canvas");
   const $a = document.createElement("a");
-  $a.download = "canvasTest.png";
+  $a.download = str;
   document.body.append($a);
   console.log($canvas.toDataURL());
   $canvas.toBlob(blob => {
