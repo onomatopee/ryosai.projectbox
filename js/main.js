@@ -16,12 +16,6 @@ function update() {
   document.getElementById('textPutter').textContent = document.getElementById('textGetter').value;
 };
 
-//const target = document.querySelector("#result");
-// document.querySelector('#output').addEventListener('click', () => {
-//   start()
-// });
-
-
 async function start() {
   const $css = document.querySelector("#css");
   const $preview = document.querySelector("#result");
