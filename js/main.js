@@ -1,14 +1,25 @@
-// codes copied and pasted from https://blog.totoraj.net/sample/html-to-canvas/sample.html and https://blog.totoraj.net/2022-01-07-html-to-canvas/
-
-function routine() {
+function generateImages() {
   //load csv
-  //input nm time place text
+  //get nm time place text imgUrl
+  routine(time,place,text,imgUrl);
+}
+
+function routine(time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;
   document.getElementById('placePutter').textContent = place;
   document.getElementById('textPutter').textContent = text;
+  document.getElementById('resImg').src = imgUrl;
   start();
   saveCanvasStr(nm);
 }
+
+function update() {
+  document.getElementById('timePutter').textContent = document.getElementById('timeGetter').value;
+  document.getElementById('placePutter').textContent = document.getElementById('placeGetter').value;
+  document.getElementById('textPutter').textContent = document.getElementById('textGetter').value;
+};
+
+// codes copied and pasted from https://blog.totoraj.net/sample/html-to-canvas/sample.html and https://blog.totoraj.net/2022-01-07-html-to-canvas/
 
 document.addEventListener("DOMContentLoaded", () => {
   const $preview = document.querySelector("#result");
@@ -20,12 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, false);
 });
-
-function update() {
-  document.getElementById('timePutter').textContent = document.getElementById('timeGetter').value;
-  document.getElementById('placePutter').textContent = document.getElementById('placeGetter').value;
-  document.getElementById('textPutter').textContent = document.getElementById('textGetter').value;
-};
 
 async function start() {
   const $css = document.querySelector("#css");
