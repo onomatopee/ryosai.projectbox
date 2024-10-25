@@ -4,7 +4,7 @@ function generateImages() {
   for (let i = 1; i <= 10; i++) {
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
     start();
-    saveCanvasStr(nm);
+    saveCanvasStr(String(i)+".jpg");
   }
 }
 
