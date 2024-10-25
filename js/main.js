@@ -12,7 +12,7 @@ function routine(nm,time,place,text,imgUrl) {
   document.getElementById('textPutter').textContent = text;
   document.getElementById('resImg').src = imgUrl;
   start();
-  setTimeout(saveCanvasStr(nm), 500);
+  setTimeout(saveCanvasStr(nm), 2000);
   //saveCanvasStr(nm);
 }
 

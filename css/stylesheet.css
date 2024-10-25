@@ -95,10 +95,10 @@ footer p {
 
 .res {
   width: 400px;
-  height: 540px;
+  height: 580px;
   background-image: url(../img/back2.png);
   background-size: 100%;
-  padding: 80px 50px;
+  padding: 60px 50px;
   font-family: "noto-bold", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -110,7 +110,7 @@ footer p {
 .res img {
   width: 350px;
   height: 350px;
-  margin: auto;
+  margin: 10px 25px;
 }
 .res .head_left {
   display: block;
