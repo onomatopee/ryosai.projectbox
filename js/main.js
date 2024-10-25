@@ -3,19 +3,8 @@ function generateImages() {
   //get nm time place text imgUrl
   for (let i = 1; i <= 10; i++) {
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
-    const $preview = document.querySelector("#result");
-      $preview.addEventListener("input", () => {
-        for (const $img of $preview.querySelectorAll("img")) {
-          if ($img.src.match(/^https*:/)) {
-            $img.crossOrigin = "anonymous";
-          }
-        }
-      }, false);
-      start();
-      setTimeout(() => {saveCanvas()},3000);
   }
 }
-
 
 function routine(nm,time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;
@@ -23,9 +12,16 @@ function routine(nm,time,place,text,imgUrl) {
   document.getElementById('textPutter').textContent = text;
   document.getElementById('nm').textContent = nm;
   document.getElementById('resImg').src = imgUrl;
-  //start();
-  //start();
-  //saveCanvasStr(nm);
+  const $preview = document.querySelector("#result");
+  $preview.addEventListener("input", () => {
+    for (const $img of $preview.querySelectorAll("img")) {
+      if ($img.src.match(/^https*:/)) {
+        $img.crossOrigin = "anonymous";
+      }
+    }
+  }, false);
+  start();
+  setTimeout(() => {saveCanvas()},3000);
 }
 
 function update() {
