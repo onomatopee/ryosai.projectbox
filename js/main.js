@@ -3,10 +3,16 @@ function generateImages() {
   //get nm time place text imgUrl
   for (let i = 1; i <= 10; i++) {
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
-    start();
-    setTimeout(console.log(),2000,"!!");
-    setTimeout(saveCanvasStr(),2000,String(i)+".jpg");
-    //saveCanvasStr(String(i)+".jpg");
+    const $preview = document.querySelector("#result");
+      $preview.addEventListener("input", () => {
+        for (const $img of $preview.querySelectorAll("img")) {
+          if ($img.src.match(/^https*:/)) {
+            $img.crossOrigin = "anonymous";
+          }
+        }
+      }, false);
+      start();
+      setTimeout(() => {saveCanvas()},1000);
   }
 }
 
@@ -40,8 +46,7 @@ function startAndSave() {
     }
   }, false);
   start();
-  //setTimeout(console.log(),2000,"!!");
-  setTimeout(() => {saveCanvas()},2000);
+  setTimeout(() => {saveCanvas()},1000);
 }
 
 
