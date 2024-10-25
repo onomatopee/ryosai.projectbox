@@ -2,13 +2,18 @@ function generateImages() {
   //load csv
   //get nm time place text imgUrl
   let i = 1;
-  setInterval(() => {
+  const interval = setInterval(() => {
     i += 1;
-    const interval = routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
+    routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
     if (count <= 10) {
       clearInterval(interval);
     }
   }, 3000);
+}
+
+function test() {
+  let id = document.getElementById('timeGetter').value;
+  routine(String(id)+".jpg",String(id),"雪国","ああああああ！","img/"+String(id)+".jpg");
 }
 
 function routine(nm,time,place,text,imgUrl) {
@@ -38,6 +43,7 @@ function update() {
 
 
 function startAndSave() {
+  update();
   const $preview = document.querySelector("#result");
   $preview.addEventListener("input", () => {
     for (const $img of $preview.querySelectorAll("img")) {
@@ -82,17 +88,17 @@ async function start() {
     "data:image/svg+xml;base64,"
     + btoa(unescape(encodeURIComponent(svgText)));
   
-  // 1倍のサイズでcanvasに描画する
+  // 2倍のサイズでcanvasに描画する
   // svgなので描画サイズは自由に変えられる
-  $canvas.width = w;
-  $canvas.height = h;
+  $canvas.width = w * 2;
+  $canvas.height = h * 2;
 
   const img = new Image();
   img.src = svgBase64;
 
   img.onload = () => {
-    // 1倍のサイズでcanvasに描画する
-    ctx.drawImage(img, 0, 0, w, h);
+    // 2倍のサイズでcanvasに描画する
+    ctx.drawImage(img, 0, 0, w * 2, h * 2);
   }
   img.onerror = err => {
     console.log(err);
