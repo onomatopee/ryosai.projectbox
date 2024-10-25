@@ -52,7 +52,7 @@ function startAndSave() {
   start();
   console.log("??");
   setTimeout(console.log(),2000,"!!");
-  setTimeout(function(){saveCanvas()},2000);
+  saveCanvas();
 }
 
 
