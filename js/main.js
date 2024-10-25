@@ -82,7 +82,7 @@ let events = [
 
 
 
-function id() {
+function test() {
   let id = document.getElementById('tentacles').value;
   routine(events[id]["name"],events[id]["time"],events[id]["place"],events[id]["text"],"img/"+String(id+1)+".jpg");
 }
