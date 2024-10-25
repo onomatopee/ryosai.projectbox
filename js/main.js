@@ -39,6 +39,16 @@ function update() {
 
 
 function startAndSave() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const $preview = document.querySelector("#result");
+    $preview.addEventListener("input", () => {
+      for (const $img of $preview.querySelectorAll("img")) {
+        if ($img.src.match(/^https*:/)) {
+          $img.crossOrigin = "anonymous";
+        }
+      }
+    }, false);
+  });
   start();
   saveCanvas();
 }
