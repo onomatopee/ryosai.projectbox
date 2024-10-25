@@ -3,16 +3,16 @@ function generateImages() {
   //get nm time place text imgUrl
   let i = 1;
   const interval = setInterval(() => {
-    i += 1;
+    i++;
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
-    if (i >= 10) {
+    if (i > 10) {
       clearInterval(interval);
     }
   }, 3000);
 }
 
 function test() {
-  let id = document.getElementById('timeGetter').value;
+  let id = document.getElementById('tentacles').value;
   routine(String(id)+".jpg",String(id),"雪国","ああああああ！","img/"+String(id)+".jpg");
 }
 
