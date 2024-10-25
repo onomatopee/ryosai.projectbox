@@ -31,7 +31,7 @@ function routine(nm,time,place,text,imgUrl) {
     }
   }, false);
   start();
-  setTimeout(() => {saveCanvas()},3000);
+  setTimeout(() => {saveCanvas()},5000);
 }
 
 function update() {
