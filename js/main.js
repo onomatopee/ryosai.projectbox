@@ -5,7 +5,7 @@ function generateImages() {
   const interval = setInterval(() => {
     i += 1;
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
-    if (count <= 10) {
+    if (i >= 10) {
       clearInterval(interval);
     }
   }, 3000);
