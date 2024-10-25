@@ -4,7 +4,9 @@ function generateImages() {
   for (let i = 1; i <= 10; i++) {
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
     start();
-    saveCanvasStr(String(i)+".jpg");
+    println(i);
+    setTimeout(saveCanvasStr(),2000,String(i)+".jpg");
+    //saveCanvasStr(String(i)+".jpg");
   }
 }
 
@@ -15,7 +17,6 @@ function routine(nm,time,place,text,imgUrl) {
   document.getElementById('resImg').src = imgUrl;
   //start();
   //start();
-  //setTimeout(saveCanvasStr(),2000,nm);
   //saveCanvasStr(nm);
 }
 
