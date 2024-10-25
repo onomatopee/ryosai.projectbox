@@ -96,8 +96,8 @@ function routine(nm,time,place,text,imgUrl) {
       }
     }
   }, false);
-  start();
-  setTimeout(() => {saveCanvas()},5000);
+  setTimeout(() => {start()},500);
+  setTimeout(() => {saveCanvas()},5500);
 }
 
 function update() {
