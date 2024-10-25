@@ -2,6 +2,16 @@ function generateImages() {
   //load csv
   //get nm time place text imgUrl
   for (let i = 1; i <= 10; i++) {
+    document.addEventListener("DOMContentLoaded", () => {
+      const $preview = document.querySelector("#result");
+      $preview.addEventListener("input", () => {
+        for (const $img of $preview.querySelectorAll("img")) {
+          if ($img.src.match(/^https*:/)) {
+            $img.crossOrigin = "anonymous";
+          }
+        }
+      }, false);
+    });
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
     start();
     console.log(i);
@@ -10,10 +20,6 @@ function generateImages() {
   }
 }
 
-function startAndSave() {
-  start();
-  saveCanvas();
-}
 
 function routine(nm,time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;
@@ -30,6 +36,13 @@ function update() {
   document.getElementById('placePutter').textContent = document.getElementById('placeGetter').value;
   document.getElementById('textPutter').textContent = document.getElementById('textGetter').value;
 };
+
+
+function startAndSave() {
+  start();
+  saveCanvas();
+}
+
 
 // codes copied and pasted from https://blog.totoraj.net/sample/html-to-canvas/sample.html and https://blog.totoraj.net/2022-01-07-html-to-canvas/
 
