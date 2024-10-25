@@ -2,11 +2,11 @@ function generateImages() {
   //load csv
   //get nm time place text imgUrl
   for (let i = 1; i <= 10; i++) {
-    routine(String(i),"雪国","ああああああ！","img/"+String(i)+"jpg");
+    routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
   }
 }
 
-function routine(time,place,text,imgUrl) {
+function routine(nm,time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;
   document.getElementById('placePutter').textContent = place;
   document.getElementById('textPutter').textContent = text;

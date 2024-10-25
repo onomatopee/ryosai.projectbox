@@ -98,7 +98,7 @@ footer p {
   height: 740px;
   background-image: url(../img/back2.png);
   background-size: 100%;
-  padding: 50px;
+  padding: 100px 50px;
   font-family: "noto-bold", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -112,12 +112,14 @@ footer p {
   height: 350px;
 }
 .res .head_left {
-  display: inline-block;
-  width: 45%;
+  display: block;
+  float: left;
+  width: 50%;
 }
 .res .head_right {
-  display: inline-block;
-  width: 45%;
+  display: block;
+  float: right;
+  width: 50%;
 }
 .res #timePutter {
   left: 5%;
