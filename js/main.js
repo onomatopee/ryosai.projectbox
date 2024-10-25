@@ -40,8 +40,8 @@ function startAndSave() {
     }
   }, false);
   start();
-  setTimeout(console.log(),2000,"!!");
-  saveCanvas();
+  //setTimeout(console.log(),2000,"!!");
+  setTimeout(() => {saveCanvas()},2000);
 }
 
 
