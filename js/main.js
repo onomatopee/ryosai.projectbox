@@ -12,7 +12,7 @@ function generateImages() {
         }
       }, false);
       start();
-      setTimeout(() => {saveCanvas()},1000);
+      setTimeout(() => {saveCanvas()},2000);
   }
 }
 
@@ -46,7 +46,7 @@ function startAndSave() {
     }
   }, false);
   start();
-  setTimeout(() => {saveCanvas()},1000);
+  setTimeout(() => {saveCanvas()},2000);
 }
 
 
