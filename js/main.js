@@ -2,19 +2,9 @@ function generateImages() {
   //load csv
   //get nm time place text imgUrl
   for (let i = 1; i <= 10; i++) {
-    document.addEventListener("DOMContentLoaded", () => {
-      const $preview = document.querySelector("#result");
-      $preview.addEventListener("input", () => {
-        for (const $img of $preview.querySelectorAll("img")) {
-          if ($img.src.match(/^https*:/)) {
-            $img.crossOrigin = "anonymous";
-          }
-        }
-      }, false);
-    });
     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
     start();
-    console.log(i);
+    setTimeout(console.log(),2000,"!!");
     setTimeout(saveCanvasStr(),2000,String(i)+".jpg");
     //saveCanvasStr(String(i)+".jpg");
   }
@@ -50,7 +40,6 @@ function startAndSave() {
     }
   }, false);
   start();
-  console.log("??");
   setTimeout(console.log(),2000,"!!");
   saveCanvas();
 }
