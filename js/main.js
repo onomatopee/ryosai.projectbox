@@ -1,7 +1,9 @@
 function generateImages() {
   //load csv
   //get nm time place text imgUrl
-  routine(time,place,text,imgUrl);
+  for (let i = 1; i <= 10; i++) {
+    routine(String(i),"雪国","ああああああ！","img/"+String(i)+"jpg");
+  }
 }
 
 function routine(time,place,text,imgUrl) {
