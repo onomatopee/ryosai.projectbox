@@ -83,8 +83,9 @@ let events = [
 
 
 function test() {
-  let id = document.getElementById('tentacles').value-1;
-  routine(events[id]["name"],events[id]["time"],events[id]["place"],events[id]["text"],"img/"+String(id+1)+".jpg");
+  let id = document.getElementById('tentacles').value;
+  id--;
+  routine(events[id]["name"],events[id]["time"],events[id]["place"],events[id]["text"],"img/"+String(++id)+".jpg");
 }
 
 function routine(nm,time,place,text,imgUrl) {
