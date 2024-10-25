@@ -1,9 +1,14 @@
 function generateImages() {
   //load csv
   //get nm time place text imgUrl
-  for (let i = 1; i <= 10; i++) {
-    routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
-  }
+  let i = 1;
+  setInterval(() => {
+    i += 1;
+    const interval = routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
+    if (count <= 10) {
+      clearInterval(interval);
+    }
+  }, 3000);
 }
 
 function routine(nm,time,place,text,imgUrl) {
