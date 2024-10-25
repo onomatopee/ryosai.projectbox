@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .font-en {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -118,15 +119,31 @@ footer p {
   width: 50%;
   text-align: center;
 }
+.res .head_left h1 {
+  font-size: 32px;
+}
 .res .head_right {
   display: block;
   float: right;
   width: 50%;
   text-align: center;
+  height: 32px;
 }
-.res #timePutter {
-  left: 5%;
+.res .head_right h1 {
+  font-size: 26px;
 }
-.res #placePutter {
-  right: 5%;
+.res .clearfix:after {
+  content: "ああ";
+  display: block;
+  clear: both;
+}
+.res .nm {
+  width: 100%;
+  text-align: center;
+}
+.res .nm h1 {
+  font-size: 26px;
+}
+.res .txt {
+  width: 100%;
 }/*# sourceMappingURL=stylesheet.css.map */
