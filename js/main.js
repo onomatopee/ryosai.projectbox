@@ -50,7 +50,7 @@ function startAndSave() {
     }, false);
   });
   start();
-  saveCanvas();
+  setTimeout(function(){saveCanvas()},2000);
 }
 
 
