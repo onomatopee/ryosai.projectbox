@@ -25,6 +25,7 @@ function routine(nm,time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;
   document.getElementById('placePutter').textContent = place;
   document.getElementById('textPutter').textContent = text;
+  document.getElementById('nm').textContent = nm;
   document.getElementById('resImg').src = imgUrl;
   //start();
   //start();
@@ -35,21 +36,22 @@ function update() {
   document.getElementById('timePutter').textContent = document.getElementById('timeGetter').value;
   document.getElementById('placePutter').textContent = document.getElementById('placeGetter').value;
   document.getElementById('textPutter').textContent = document.getElementById('textGetter').value;
+  document.getElementById('nm').textContent = document.getElementById('nmGetter').value;
 };
 
 
 function startAndSave() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const $preview = document.querySelector("#result");
-    $preview.addEventListener("input", () => {
-      for (const $img of $preview.querySelectorAll("img")) {
-        if ($img.src.match(/^https*:/)) {
-          $img.crossOrigin = "anonymous";
-        }
+  const $preview = document.querySelector("#result");
+  $preview.addEventListener("input", () => {
+    for (const $img of $preview.querySelectorAll("img")) {
+      if ($img.src.match(/^https*:/)) {
+        $img.crossOrigin = "anonymous";
       }
-    }, false);
-  });
+    }
+  }, false);
   start();
+  console.log("??");
+  setTimeout(console.log(),2000,"!!");
   setTimeout(function(){saveCanvas()},2000);
 }
 
