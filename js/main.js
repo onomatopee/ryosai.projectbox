@@ -12,7 +12,8 @@ function routine(nm,time,place,text,imgUrl) {
   document.getElementById('textPutter').textContent = text;
   document.getElementById('resImg').src = imgUrl;
   start();
-  saveCanvasStr(nm);
+  setTimeout(saveCanvasStr(nm), 500);
+  //saveCanvasStr(nm);
 }
 
 function update() {

@@ -94,11 +94,11 @@ footer p {
 }
 
 .res {
-  width: 500px;
-  height: 740px;
+  width: 400px;
+  height: 540px;
   background-image: url(../img/back2.png);
   background-size: 100%;
-  padding: 100px 50px;
+  padding: 80px 50px;
   font-family: "noto-bold", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -110,16 +110,19 @@ footer p {
 .res img {
   width: 350px;
   height: 350px;
+  margin: auto;
 }
 .res .head_left {
   display: block;
   float: left;
   width: 50%;
+  text-align: center;
 }
 .res .head_right {
   display: block;
   float: right;
   width: 50%;
+  text-align: center;
 }
 .res #timePutter {
   left: 5%;
