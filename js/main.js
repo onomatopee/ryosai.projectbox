@@ -10,6 +10,11 @@ function generateImages() {
   }
 }
 
+function startAndSave() {
+  start();
+  saveCanvas();
+}
+
 function routine(nm,time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;
   document.getElementById('placePutter').textContent = place;

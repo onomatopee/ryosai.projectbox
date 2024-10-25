@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .font-en {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -120,20 +119,21 @@ footer p {
   text-align: center;
 }
 .res .head_left h1 {
-  font-size: 32px;
+  font-size: 40px;
 }
 .res .head_right {
   display: block;
   float: right;
   width: 50%;
   text-align: center;
-  height: 32px;
+  height: 58px;
 }
 .res .head_right h1 {
-  font-size: 26px;
+  font-size: 32px;
+  vertical-align: text-bottom;
 }
-.res .clearfix:after {
-  content: "ああ";
+.res .head:after {
+  content: "";
   display: block;
   clear: both;
 }
