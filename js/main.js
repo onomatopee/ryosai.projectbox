@@ -1,31 +1,16 @@
-// function generateImages() {
-//   //load csv
-//   //get nm time place text imgUrl
-//   let i = 1;
-//   const interval = setInterval(() => {
-//     i++;
-//     routine(String(i)+".jpg",String(i),"雪国","ああああああ！","img/"+String(i)+".jpg");
-//     if (i > 10) {
-//       clearInterval(interval);
-//     }
-//   }, 3000);
-// }
 
 function generate16() {
   let id = document.getElementById('tentacles').value;
-  id--;
   routine(projects16[id]["name"],projects16[id]["time"],projects16[id]["place"],projects16[id]["text"],"img/projects/"+projects16[id]["imgurl"]);
 }
 
 function generate19() {
   let id = document.getElementById('tentacles').value;
-  id--;
   routine(projects19[id]["name"],projects19[id]["time"],projects19[id]["place"],projects19[id]["text"],"img/projects/"+projects19[id]["imgurl"]);
 }
 
 function generate22() {
   let id = document.getElementById('tentacles').value;
-  id--;
   routine(projects22[id]["name"],projects22[id]["time"],projects22[id]["place"],projects22[id]["text"],"img/projects/"+projects22[id]["imgurl"]);
 }
 
