@@ -8,7 +8,7 @@
     .res {
       width: 500px;
       height: 700px;
-      background-image: url(img/back2.png);
+      background-image: url(../img/back2.png);
       background-size: 100%;
       font-family: "noto-bold", sans-serif;
       font-weight: 600;
@@ -20,7 +20,6 @@
     }
     .res img {
       width: 350px;
-      height: 416px;
       margin: 10px 75px;
     }
     .res .head {
@@ -66,20 +65,11 @@
       position: relative;
       top: 55px;
     }
-    .res .txt {
-      width: 400px;
-      margin: 0px 50px;
-      position: relative;
-      top: 55px;
-    }
-    .res .txt p {
-      font-size: 18px;
-    }
   </style>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-  <link rel="stylesheet" href="css/stylesheet2.css">
+  <link rel="stylesheet" href="css/stylesheet3.css">
   <title>Kumano Ryosai 2024</title>
 </head>
 
@@ -91,17 +81,17 @@
 
 <main>
   <div class="island">
-    <h1 class="font-en">Form(0~187)</h1>
+    <h1 class="font-en">Form(0~143)</h1>
     <input id="timeGetter" placeholder="23:00" type="text">
     <input id="placeGetter" placeholder="@雪国" type="text">
     <input id="nmGetter" placeholder="Windows XP" type="text">
     <textarea id="textGetter" placeholder="国境の長いトンネルを抜けると雪国であった。夜の底が白くなった。信号所に汽車が止まった。向側の座席から娘が立って来て、島村の前のガラス窓を落した。雪の冷気が流れこんだ。"></textarea>
-    <input type="number" id="tentacles" name="tentacles" min="0" max="187" />
+    <input type="number" id="tentacles" name="tentacles" min="0" max="143" />
     <button onclick="update()">update</button>
     <button id="output" onclick="start()">generate canvas</button>
     <button id="output" onclick="saveCanvas()">output image</button>
     <button id="output" onclick="startAndSave()">WoW</button>
-    <button id="output" onclick="generate19()">id</button>
+    <button id="output" onclick="generate22()">id</button>
     <!-- <button id="output" onclick="generateImages()">一撃必殺</button> -->
     <p></p>
   </div>
@@ -121,9 +111,9 @@
     <div class="img">
       <img id="resImg" src="img/test.jpg">
     </div>
-    <div class="txt">
+    <!-- <div class="txt">
       <p id="textPutter">国境の長いトンネルを抜けると雪国であった。夜の底が白くなった。信号所に汽車が止まった。</p>
-    </div>
+    </div> -->
   </div>
   <canvas id="canvas" width="1000" height="1400"></canvas>
 </main>
