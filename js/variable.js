@@ -1,6 +1,6 @@
 // events
 
-export const projects16 = 
+const projects16 = 
 [
   {
       "name": "「自治ん祭」粉砕",
@@ -1237,7 +1237,7 @@ export const projects16 =
 ];
 
 
-export const projects19 = 
+const projects19 = 
 [
   {
       "name": "1/3ヶ月1/3万円生活",
@@ -2557,7 +2557,7 @@ export const projects19 =
   }
 ];
 
-export const projects22 = 
+const projects22 = 
 [
   {
       "name": "「スプラトゥーン」を救いたい",
