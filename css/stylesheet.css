@@ -120,17 +120,17 @@ footer p {
   text-align: center;
 }
 .res .head_left h1 {
-  font-size: 37px;
+  font-size: 32px;
 }
 .res .head_right {
   display: block;
   float: right;
   width: 50%;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 .res .head_right h1 {
-  font-size: 28px;
+  font-size: 25px;
 }
 .res .head:after {
   content: "";
@@ -144,7 +144,7 @@ footer p {
   top: 60px;
 }
 .res .nm h1 {
-  font-size: 25px;
+  font-size: 37px;
 }
 .res .img {
   width: 100%;
