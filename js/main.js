@@ -15,6 +15,27 @@ function generate22() {
 }
 
 
+
+function previewFile(file) {
+  // FileReaderオブジェクトを作成
+  const reader = new FileReader();
+  // ファイルが読み込まれたときに実行する
+  reader.onload = function (e) {
+    const imageUrl = e.target.result; // 画像のURLはevent.target.resultで呼び出せる
+    const img = document.getElementById("resImg"); // img要素を作成
+    img.src = imageUrl; // 画像のURLをimg要素にセット
+  }
+  // いざファイルを読み込む
+  reader.readAsDataURL(file);
+}
+// <input>でファイルが選択されたときの処理
+const fileInput = document.getElementById("photo");
+const handleFileSelect = () => {
+  const files = fileInput.files;
+  previewFile(files[0]);
+}
+fileInput.addEventListener('change', handleFileSelect);
+
 function routine(nm,time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;
   document.getElementById('placePutter').textContent = place;
@@ -51,8 +72,8 @@ function startAndSave() {
       }
     }
   }, false);
-  start();
-  setTimeout(() => {saveCanvas()},2000);
+  setTimeout(() => {start()},2500);
+  setTimeout(() => {saveCanvas()},5000);
 }
 
 
