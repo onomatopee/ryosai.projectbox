@@ -11,12 +11,28 @@
 //   }, 3000);
 // }
 
+import projects16 from "variable.js";
+import projects19 from "variable.js";
+import projects22 from "variable.js";
 
-function test() {
+function genrate16() {
   let id = document.getElementById('tentacles').value;
   id--;
-  routine(events[id]["name"],events[id]["time"],events[id]["place"],events[id]["text"],"img/projects/"+events[id]["imgurl"]);
+  routine(projects16[id]["name"],projects16[id]["time"],projects16[id]["place"],projects16[id]["text"],"img/projects/"+projects16[id]["imgurl"]);
 }
+
+function genrate19() {
+  let id = document.getElementById('tentacles').value;
+  id--;
+  routine(projects19[id]["name"],projects19[id]["time"],projects19[id]["place"],projects19[id]["text"],"img/projects/"+projects19[id]["imgurl"]);
+}
+
+function genrate22() {
+  let id = document.getElementById('tentacles').value;
+  id--;
+  routine(projects22[id]["name"],projects22[id]["time"],projects22[id]["place"],projects22[id]["text"],"img/projects/"+projects22[id]["imgurl"]);
+}
+
 
 function routine(nm,time,place,text,imgUrl) {
   document.getElementById('timePutter').textContent = time;

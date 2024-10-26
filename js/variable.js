@@ -1,6 +1,6 @@
 // events
 
-const events16 = 
+const projects16 = 
 [
   {
       "name": "「自治ん祭」粉砕",
