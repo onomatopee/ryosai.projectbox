@@ -1,7 +1,7 @@
-document.getElementById("counter16").textContent = "Form(0~"+String(projects16.length-1)+")";
-document.getElementById("counter19").textContent = "Form(0~"+String(projects19.length-1)+")";
-document.getElementById("counter22").textContent = "Form(0~"+String(projects22.length-1)+")";
-document.getElementById("counterU").textContent = "Form(0~"+String(projectsU.length-1)+")";
+// document.getElementById("counter16").textContent = "Form(0~"+String(projects16.length-1)+")";
+// document.getElementById("counter19").textContent = "Form(0~"+String(projects19.length-1)+")";
+// document.getElementById("counter22").textContent = "Form(0~"+String(projects22.length-1)+")";
+// document.getElementById("counterU").textContent = "Form(0~"+String(projectsU.length-1)+")";
 
 function unified() {
   let id = document.getElementById('tentacles').value;
